@@ -48,3 +48,19 @@ console.log(selectedFruits[4]); // 5
 
 selectedFruits [1] = 'Pear'; // change Banana >> Pear
 console.log(selectedFruits); //'Apple', 'Pear', 'Orange', 'Pineaple'| length: 5
+
+//objects
+let user = {
+    firstName:'Lak',
+    lastName: 'Donovan',
+    email: 'donovanlak@gmail.com',
+    age: 26, //number
+    location: 'uk',
+    readingList:['HTML','CSS','JavaScript'], //array
+}
+console.log(user); //show all data
+console.log(user.email); //check only email
+user.age = 50;
+console.log(user.age);
+console.log(user.readingList[0]); // HTMl : check array number 0 in user
+console.log(user.readingList.length);
