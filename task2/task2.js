@@ -64,3 +64,10 @@ user.age = 50;
 console.log(user.age);
 console.log(user.readingList[0]); // HTMl : check array number 0 in user
 console.log(user.readingList.length);
+
+//change typeof
+let x = 123
+console.log(typeof x); //typeog = number
+x = 'Lak'
+console.log(x);
+console.log(typeof x); //now it turn to string
