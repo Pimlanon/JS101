@@ -25,3 +25,7 @@ console.log(result);
 
 let bidMas = 5 * (10-3)**2; //ไม่มี () จะเรียงจากซ้ายไปขวา | 5 * (10-3)**2 อันนี้ () ก่อน
 console.log(bidMas);
+
+// undefined
+let age; //ไม่ได้ใส่ค่ากำหนดให้
+console.log(age); //undefined ไม่ถูกกำหนดค่า 
