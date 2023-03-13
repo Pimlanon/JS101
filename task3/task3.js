@@ -6,3 +6,7 @@ if (buyerAge < 18) {
 }
 
 
+info ('Jack');
+function info(name){
+    console.log('Hello' + name);
+}
