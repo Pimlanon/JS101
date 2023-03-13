@@ -23,3 +23,17 @@ myInfo('Jill'); //<<<expression style need to declare value under function
 
 //---------------------------
 //arrow function use => to less coding
+const mySecondInfo = name => console.log('Hello ' + name);
+mySecondInfo('Jenny');
+
+
+//write without arrow function 
+function addNumbers(a,b) {
+    return a + b;
+}
+console.log (addNumbers (5,3));
+
+//turn to arrow function
+const addArrowNumbers = (a,b) => console.log (a + b);
+addArrowNumbers(5,5);
+
