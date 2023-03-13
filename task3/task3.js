@@ -37,3 +37,12 @@ console.log (addNumbers (5,3));
 const addArrowNumbers = (a,b) => console.log (a + b);
 addArrowNumbers(5,5);
 
+
+//-------------
+const myFunction = function(a,b) {
+    return a*b;
+}
+
+let x = myFunction(5,3);
+let y = x
+console.log(y);
