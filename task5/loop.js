@@ -54,3 +54,15 @@ for (let i = 0; i <= 4; i++) {
         }
     }
     oddNumber(50);
+console.log('-------------------------');
+
+
+    let star = '';
+for (let i = 0; i < 5; i++) {
+    //console.log('i is' + i);
+    for (j = 0; j < 1; j++) {
+        //console.log('j is' + j);
+        star = star+('*');
+        console.log(star);
+    }
+}
