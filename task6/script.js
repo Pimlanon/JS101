@@ -36,4 +36,6 @@ let storeEUR = storeUSD.map(toEuros);
 
 console.log(storeUSD);
 console.log(storeEUR);
+
 console.log('-------------------------------');
+
