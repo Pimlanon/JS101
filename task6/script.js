@@ -14,5 +14,26 @@ letters.forEach(item =>{
     }else{
         count[item] = 1;
     }
+    console.log(count);
 });
-console.log(count);
+console.log('-------------------------------');
+
+//.map
+// const storeUSD = [5, 6, 7, 8];
+// const storeEUR = storeUSD.map(value => value*=0.85);
+
+// console.log(storeUSD);
+// console.log(storeEUR);
+
+//.map with function
+let storeUSD = [5, 6, 7, 8];
+
+function toEuros(value) {
+    value *= 0.85;
+    return value;
+}
+let storeEUR = storeUSD.map(toEuros);
+
+console.log(storeUSD);
+console.log(storeEUR);
+console.log('-------------------------------');
