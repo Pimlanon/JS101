@@ -35,3 +35,21 @@ switch (randomNumber) {
     break;
 }
 console.log(eightBall);
+
+let raceNumber = Math.floor(Math.random() * 1000);
+
+console.log('----------------------------------');
+
+const registeredEarly = false;
+let age = 18;
+if (age > 18) {
+    raceNumber + 1000
+};
+if (age > 18 && registeredEarly) {
+    console.log(`Race will start at 9:30am. Your number is ${raceNumber}`);
+} else if (age > 18 && !registeredEarly) {
+    console.log(`Race will start at 11:00am. Your number is ${raceNumber}`);
+} else if (age < 18) {
+    console.log(`Race will start at 12:30am. Your number is ${raceNumber}`);
+} else {
+    console.log(`see the registration desk`);}
