@@ -13,3 +13,5 @@ readingList.forEach(function(list){
     list.innerHTML = ' | <i>book</i> <b>title : </b>' + list.textContent;
     //list.textContent = `book title: ${list.textContent}`; ใช้อันนี้ก็ได้
 })
+
+console.log(----------------------);
