@@ -10,5 +10,5 @@ tryHere.innerHTML = 'Advanced ';
 //.textContent ใช้ได้เหมือน .innerHTML
 const readingList = document.querySelectorAll('#reading-list li .name');
 readingList.forEach(function(list){
-    list.textContent += 'book title: ';
+    list.innerHTML += ' book <b>title:</b> ';
 })
