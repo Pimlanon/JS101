@@ -7,8 +7,8 @@ const tryHere = document.querySelector('#reading-list li:nth-child(1) .delete');
 console.log(tryHere);
 tryHere.innerHTML = 'Advanced ';
 
-//.textContent ใช้ได้เหมือน .innerHTML
+//.textContent ใช้ได้เหมือน .innerHTML แต่ .innerHTML ใส่ tag ได้
 const readingList = document.querySelectorAll('#reading-list li .name');
 readingList.forEach(function(list){
-    list.innerHTML += ' book <b>title:</b> ';
+    list.innerHTML = ' | <i>book</i> <b>title : </b>' + list.textContent;
 })
