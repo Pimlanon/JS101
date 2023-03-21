@@ -11,4 +11,5 @@ tryHere.innerHTML = 'Advanced ';
 const readingList = document.querySelectorAll('#reading-list li .name');
 readingList.forEach(function(list){
     list.innerHTML = ' | <i>book</i> <b>title : </b>' + list.textContent;
+    //list.textContent = `book title: ${list.textContent}`; ใช้อันนี้ก็ได้
 })
