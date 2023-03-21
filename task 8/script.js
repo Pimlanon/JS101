@@ -15,3 +15,22 @@ readingList.forEach(function(list){
 })
 
 console.log(----------------------);
+//better way for element.addEventListener()
+const list = document.querySelector('#reading-list ul');
+
+// //Interacting with Form -- add readinglist
+const addForm = document.forms['add-list'];
+addForm.addEventListener('submit',function(e){
+    e.preventDefault(); // prevent from refresh
+    const value = addForm.querySelector('input[type="text"]').value; //add new reading list in the text box
+   // console.log(value);
+
+// //create element
+// //add content
+
+
+// //add classes​
+
+// //append to DOM
+
+});
