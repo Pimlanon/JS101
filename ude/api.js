@@ -17,5 +17,5 @@ request.open('GET', 'https://restcountries.com/v2/name/portugal')
 request.send();
 //when it is done, it will emit the load event
 request.addEventListener('load', function() {
-    console.log('this.responseText');
+    console.log(this.responseText);
 });
