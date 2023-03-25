@@ -13,7 +13,7 @@ console.log(johnBMI) //24.194608809993426
 let markHigherBMI = markBMI > johnBMI
 console.log(markHigherBMI) //true
 
-//chalenge #2
+//chalenge1 exercise2
 markWeight = 95;
 markHeight = 1.88;
 
@@ -28,3 +28,4 @@ console.log(johnBMI) //27.44059917355372
 
 markHigherBMI = markBMI > johnBMI
 console.log(markHigherBMI) //false
+
