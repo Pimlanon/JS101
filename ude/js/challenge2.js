@@ -45,4 +45,28 @@ scoreKoalas = calcAverage(23, 34, 27);  //28
 console.log(scoreDolphins, scoreKoalas); 
 checkWinner(scoreDolphins, scoreKoalas); //Dolphins is the winner (60 vs. 28)
 
+//---------------------
+//.push()
+const friends = ['Micheal', 'Steven', 'Peter'];
+const newLength = friends.push('Jay');
+console.log(friends); //[ 'Micheal', 'Steven', 'Peter', 'Jay' ]
+console.log(newLength); //4
+//.unshift()
+friends.unshift('John');
+console.log(friends); //[ 'John', 'Micheal', 'Steven', 'Peter', 'Jay' ]
 
+//remove elements
+//.pop()
+friends.pop(); 
+const poped = friends.pop(); 
+console.log(friends); //[ 'John', 'Micheal', 'Steven' ]
+console.log(poped); //Peter
+
+//.shift()
+friends.shift();
+console.log(friends); //[ 'Micheal', 'Steven' ]
+
+console.log(friends.indexOf('Steven')); //1
+
+console.log(friends.includes('Steven')); //true
+console.log(friends.includes('BOb')); //false
