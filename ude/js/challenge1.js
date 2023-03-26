@@ -43,3 +43,29 @@ if (scoreDolphins > scoreKoalas) {
 } else {
     console.log('Draw!')}
 console.log('/////////////////')
+
+//challenge#3 bonus#1
+scoreDolphins = 97 + 112 + 101;
+scoreKoalas = 109 + 95 + 123;
+console.log(scoreDolphins);
+console.log(scoreKoalas);
+if (scoreDolphins > 100 && scoreDolphins > scoreKoalas) {
+    console.log('The winner is Dolphins');
+} else if (scoreKoalas > 100 && scoreKoalas > scoreDolphins) {
+    console.log('The winner is Koalas');
+} else {
+    console.log('Draw!')}
+console.log('/////////////////')
+
+//challenge#3 bonus#2
+scoreDolphins = 97 + 112 + 101;
+scoreKoalas = 109 + 95 + 106;
+console.log(scoreDolphins);
+console.log(scoreKoalas);
+if (scoreDolphins >= 100 && scoreDolphins === scoreKoalas) {
+    console.log('Draw');
+} else if (scoreKoalas >= 100 && scoreKoalas === scoreDolphins) {
+    console.log('Draw again');
+} 
+
+///////////////////////////////////////////////////
