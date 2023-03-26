@@ -29,3 +29,17 @@ console.log(johnBMI) //27.44059917355372
 markHigherBMI = markBMI > johnBMI
 console.log(markHigherBMI) //false
 
+///////////////////////////////////////////////////
+//code challenge#3
+
+let scoreDolphins = 96 + 108 + 89;
+let scoreKoalas = 88 + 91 + 110;
+console.log(scoreDolphins);
+console.log(scoreKoalas);
+if (scoreDolphins > scoreKoalas) {
+    console.log('The winner is Dolphins=');
+} else if (scoreKoalas > scoreDolphins) {
+    console.log('The winner is Koalas');
+} else {
+    console.log('Draw!')}
+console.log('/////////////////')
