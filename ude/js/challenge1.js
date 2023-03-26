@@ -31,7 +31,7 @@ console.log(markHigherBMI) //false
 
 ///////////////////////////////////////////////////
 //code challenge#3
-
+/*
 let scoreDolphins = 96 + 108 + 89;
 let scoreKoalas = 88 + 91 + 110;
 console.log(scoreDolphins);
@@ -67,5 +67,23 @@ if (scoreDolphins >= 100 && scoreDolphins === scoreKoalas) {
 } else if (scoreKoalas >= 100 && scoreKoalas === scoreDolphins) {
     console.log('Draw again');
 } 
-
+*/
 ///////////////////////////////////////////////////
+
+//code challenge#4
+let billValue = 430;
+/*
+if (billValue >= 50 && billValue <= 300) {
+    console.log((billValue / 100) * 15);
+} else if (billValue < 50 || billValue > 300) {
+    console.log((billValue / 100) * 20);
+}
+*/
+// billValue / 100 * 15
+let tip = billValue >= 50 && billValue <= 300 ? (billValue / 100) * 15 : (billValue / 100) * 20
+console.log(tip);
+let totalValue = billValue + tip;
+console.log('The bill was ' + billValue + ', the tip was ' + tip + ', and the total value ' + totalValue)
+// bill 275 : The bill was 275, the tip was 41.25, and the total value 316.25
+// bill 40: The bill was 40, the tip was 8, and the total value 48
+// bill 430: The bill was 430, the tip was 86, and the total value 516
