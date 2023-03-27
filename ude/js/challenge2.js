@@ -19,6 +19,7 @@
 // avgKoala(58)
 
 //---------------------------------------
+/*
 const calcAverage = (a, b, c) => (a + b +c) / 3;
 console.log(calcAverage(3, 4, 5));
 
@@ -44,9 +45,11 @@ scoreDolphins = calcAverage(85, 54, 41); //60
 scoreKoalas = calcAverage(23, 34, 27);  //28
 console.log(scoreDolphins, scoreKoalas); 
 checkWinner(scoreDolphins, scoreKoalas); //Dolphins is the winner (60 vs. 28)
+*/
 
 //---------------------
 //.push()
+/*
 const friends = ['Micheal', 'Steven', 'Peter'];
 const newLength = friends.push('Jay');
 console.log(friends); //[ 'Micheal', 'Steven', 'Peter', 'Jay' ]
@@ -70,3 +73,41 @@ console.log(friends.indexOf('Steven')); //1
 
 console.log(friends.includes('Steven')); //true
 console.log(friends.includes('BOb')); //false
+
+if (friends.includes('Steven')) {
+    console.log('You have a friend call Steven') //You have a friend call Steven
+}
+*/
+//--------------------------
+
+//#challenge2
+/*
+const calcTip = function (billValue) {
+    if (billValue >= 50 && billValue <= 300 ) {
+        return billValue * 0.15
+    } else if  (billValue <= 49 || billValue >= 301) {
+        return billValue * 0.2
+    }
+}
+
+console.log(calcTip(100)); //15
+
+const bills = [125, 555, 44];
+console.log(bills.indexOf(0))
+
+const tips = [];
+*/
+const calcTip = function(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; 
+}
+
+const bills = [125, 555, 44];
+const l555 = 555
+
+const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tip) //[ 125, 555, 44 ] [ 18.75, 111, 8.8 ]
+
+const total1 = bills[0] + tip[0] 
+const total2 = bills[1] + tip[1] 
+const total3 = bills[2] + tip[2]
+console.log(total1, total2, total3) //143.75 666 52.8
