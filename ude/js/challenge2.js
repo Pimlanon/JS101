@@ -54,6 +54,7 @@ const friends = ['Micheal', 'Steven', 'Peter'];
 const newLength = friends.push('Jay');
 console.log(friends); //[ 'Micheal', 'Steven', 'Peter', 'Jay' ]
 console.log(newLength); //4
+
 //.unshift()
 friends.unshift('John');
 console.log(friends); //[ 'John', 'Micheal', 'Steven', 'Peter', 'Jay' ]
@@ -116,6 +117,7 @@ console.log(total1, total2, total3) //143.75 666 52.8
 */
 //-------------------------------------
 
+//Dot vs Bracket Notation
 const jonarArray = [
     'Jonas',
     'Schmedtman',
@@ -132,3 +134,32 @@ const jonas = {
     job: 'teacher',
     friends: ['Michale', 'Peter', 'Steven']
 };
+console.log(jonas);
+
+console.log(jonas.lastName); //Schmedtman
+console.log(jonas['lastName']); //Schmedtman
+
+//วิธีนี้ใช้กับ . ไม่ได้
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]); //Jonas
+console.log(jonas['last' + nameKey]); //Schmedtman
+
+const interestedIn = prompt('What do you want to know about Joans? Choose between firstName, lastName, age, job, and friends');
+
+if(jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request! hiChoose between firstName, lastName, age, job, and friends');
+}
+
+//เพิ่ม value เข้าไปใน obj จากที่ตอนแรกไม่มีได้ 2 วิธี
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+//#challenge
+//เขียนได้ 2 แบบ เลือกที่ชอบได้เลย
+console.log(jonas.firstName + ' has' + jonas.friends.length + ' friends, and his best friend is called ' + jonas.friends[0]  )
+//Jonas has3 friends, and his best friend is called Michale
+console.log(`${jonas.firstName}  has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}` )
+//Jonas has3 friends, and his best friend is called Michale
