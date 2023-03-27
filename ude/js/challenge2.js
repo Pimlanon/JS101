@@ -82,6 +82,7 @@ if (friends.includes('Steven')) {
 
 //#challenge2
 /*
+//failed
 const calcTip = function (billValue) {
     if (billValue >= 50 && billValue <= 300 ) {
         return billValue * 0.15
@@ -97,6 +98,7 @@ console.log(bills.indexOf(0))
 
 const tips = [];
 */
+/*
 const calcTip = function(bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; 
 }
@@ -111,3 +113,22 @@ const total1 = bills[0] + tip[0]
 const total2 = bills[1] + tip[1] 
 const total3 = bills[2] + tip[2]
 console.log(total1, total2, total3) //143.75 666 52.8
+*/
+//-------------------------------------
+
+const jonarArray = [
+    'Jonas',
+    'Schmedtman',
+    2037 - 1991,
+    'teacher',
+    ['Michale', 'Peter', 'Steven']
+];
+
+//create object
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtman',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michale', 'Peter', 'Steven']
+};
