@@ -36,6 +36,9 @@
 // .catch((error) => onFailed(error));
 
 ////////////////////////////////////////////////////////////////////////
+/*
+
+//ร้านกาแฟ ใช้ได้
 let stocks =  {
     coffee: [ "cappuccino", "latte" ,"mocha"],
     liquid: ["hot","ice","milk"],
@@ -102,3 +105,85 @@ order(2000, () => console.log(`${stocks.coffee[1]} was selected`)) // 1. place o
 .finally(()=>{
     console.log('the shop is closed');
 });
+*/
+
+//------------------------
+/*
+async function asyncFunction() {
+    return 'Hello World'
+  }
+
+  //เขียน async ด้านบนเป็น promise
+function asyncFunction() {
+    return new Promise ((resolve) => {
+        resolve ('Hello World')
+    })
+}
+*/
+//-----------------------
+
+/*
+//ใช้ได้ ของคุณปัน
+async function showering () {
+    let action1 = await sraphom() //action 1 มารับค่า ที่resolve มาจาก brushTeeth()[promise]
+    let action2 = await brushTeeth()   // action 2 มารับค่า ที่resolve มาจาก sraphom()[promise]
+
+    console.log(action1 + ' ' + action2)
+}
+
+async function sraphom () { //resolve value = sraphom
+    return 'sraphom'
+}
+
+async function brushTeeth () { //resolve value = brushTeetn
+    return 'brushTeeth' 
+}
+
+showering(); //sraphom brushTeeth  มันเรียงลำดับตามใส่ด้านบน
+*/
+
+//------------
+
+//note: return ของ async function จะกลายเป็น resolve ของ promise
+//ก็คือ return ตัวไหน resolve ตัวนั้น
+
+/*
+async function sraphom(action) {
+    return  action + ' ' + 'sraphom' //ค่า resolve = action + ' ' + 'sraphom' 
+  }
+  
+  async function brushTeeth() {
+    return 'brushteeth' //ค่า resolve = 'brushteeth'
+  }
+  
+  async function showering() {
+    // action 1 มารับค่า ที่resolve มาจาก brushTeeth()[promise]
+    let action1 = await brushTeeth()
+    // action 2 มารับค่า ที่resolve มาจาก sraphom()[promise]
+    let action2 = await sraphom(action1)
+  
+    return action2
+  }
+  
+  showering().then((resolve) => {
+    console.log(resolve) //brushteeth sraphom
+  })
+  
+ */ 
+
+//------------------------------------
+//ใช้ async ให้เหมือน promise โดยเขียน if else
+async function brushTeeth(bool) {
+    if (bool === true) {
+      return 'brushteeth' // return เหมือน ค่า resolve
+    } else {
+      throw new Error('error จ้า') // throw error เหมือนค่า reject
+    }
+  }
+
+  brushTeeth(false)
+  .then((resolve) => {
+    console.log(resolve)
+  }) .catch((reject) => {
+    console.log(reject)
+  })
