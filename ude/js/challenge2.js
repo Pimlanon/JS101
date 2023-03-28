@@ -241,3 +241,39 @@ console.log(non.getSummary())
 */
 
 //-------------------
+//#code challenge 3
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.BMIvalue = this.mass / (this.height * this.height)
+        return this.BMIvalue; 
+    }
+}
+
+console.log(Math.floor(mark.calcBMI())); //27
+console.log(mark.BMIvalue); //27.309968138370508
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMIvalue = this.mass / (this.height * this.height)
+        return this.BMIvalue; 
+    }
+}
+
+console.log(Math.floor(john.calcBMI()));//24
+console.log(john.BMIvalue); //24.194608809993426
+
+if (mark.BMIvalue> john.BMIvalue) {
+    console.log(`${mark.fullName}'s BMI (${Math.floor(mark.BMIvalue)}) is higher than ${john.fullName}'s BMI (${Math.floor(john.BMIvalue)}) !`)
+    //Mark Miller's BMI (27) is higher than John Smith's BMI (24) !
+}
+
+
+
+
