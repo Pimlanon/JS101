@@ -105,7 +105,6 @@ const calcTip = function(bill) {
 }
 
 const bills = [125, 555, 44];
-const l555 = 555
 
 const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 console.log(bills, tip) //[ 125, 555, 44 ] [ 18.75, 111, 8.8 ]
@@ -346,6 +345,7 @@ for (let i = 0; i < jonas.length; i++) {
 
 //------------------------
 //looping backward and looping in loop
+/*
 const jonas = [
     'Jonas',
     'Schmedtman',
@@ -367,5 +367,74 @@ for (let exercise = 1; exercise <= 4 ; exercise++) {
     }
     
 }
+*/
+//------------------------
 
+//the WHILE LOOP
+/*
+for (let rep = 1; rep <= 10; rep++) {
+    //console.log(`lifting weight repetition ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) { 
+    //console.log(`WHILE: lifting weight repetition ${rep}`);
+    rep++
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) {
+        console.log(`Loop is about to end..`)
+    }
+}
+*/
+
+//-----------------------------
+/*
+const calcTip = function(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; 
+}
+
+const bills = [125, 555, 44];
+
+const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tip) //[ 125, 555, 44 ] [ 18.75, 111, 8.8 ]
+
+const total1 = bills[0] + tip[0] 
+const total2 = bills[1] + tip[1] 
+const total3 = bills[2] + tip[2]
+console.log(total1, total2, total3) //143.75 666 52.8
+*/
+
+//coding challenge #4
+const calcTip = function(bills) {
+    return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2; 
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length ; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i])
+}
+
+console.log(bills, tips, totals)
+
+const calcAverage = function(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        //sum = sum + arr[i];
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2, 3, 7]));  //4
+console.log(calcAverage(totals)); //275.19
+console.log(calcAverage(tips)); //42.89
 
