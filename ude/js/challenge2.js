@@ -241,6 +241,7 @@ console.log(non.getSummary())
 */
 
 //-------------------
+/*
 //#code challenge 3
 
 const mark = {
@@ -273,7 +274,13 @@ if (mark.BMIvalue> john.BMIvalue) {
     console.log(`${mark.fullName}'s BMI (${Math.floor(mark.BMIvalue)}) is higher than ${john.fullName}'s BMI (${Math.floor(john.BMIvalue)}) !`)
     //Mark Miller's BMI (27) is higher than John Smith's BMI (24) !
 }
+*/
+//--------------------------------
 
+//Iteration: The for Loop 
 
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
 
 
