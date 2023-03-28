@@ -279,8 +279,67 @@ if (mark.BMIvalue> john.BMIvalue) {
 
 //Iteration: The for Loop 
 
+/*
 for (let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}`);
 }
+*/
+//--------------------------------
 
+//looping array, breaking and continuing
+
+
+const jonas = [
+    'Jonas',
+    'Schmedtman',
+    2037 - 1991,
+    'teacher',
+    ['Michale', 'Peter', 'Steven'],
+    true
+];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+    console.log(jonas[i], typeof jonas[i]);
+
+    //filling types array
+    //types[i] = typeof jonas[i];
+
+    types.push(typeof jonas[i]); 
+    //[ 'string', 'string', 'number', 'string', 'object', 'boolean' ]
+}
+
+console.log(types); //[ 'string', 'string', 'number', 'string', 'object', 'boolean' ]
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages); //[ 46, 30, 68, 17 ]
+
+//continue and break
+console.log('--ONLY STRING--')
+//ให้ continue ข้ามทุกตัวที่ไม่ใช่ string 
+for (let i = 0; i < jonas.length; i++) {
+    if(typeof jonas[i] !== 'string') continue;
+
+    console.log(jonas[i], typeof jonas[i]); 
+    //Jonas string
+    //Schmedtman string
+    //teacher string
+    
+}
+
+console.log('--BREAK WITH NIMBER--')
+//เจอตัวเลขแล้วให้หยุดที่ตัวก่อนหน้า
+for (let i = 0; i < jonas.length; i++) {
+    if(typeof jonas[i] === 'number') break;
+
+    console.log(jonas[i], typeof jonas[i]); 
+    //Jonas string
+    //Schmedtman string
+}
 
