@@ -288,7 +288,7 @@ for (let rep = 1; rep <= 10; rep++) {
 
 //looping array, breaking and continuing
 
-
+/*
 const jonas = [
     'Jonas',
     'Schmedtman',
@@ -342,4 +342,30 @@ for (let i = 0; i < jonas.length; i++) {
     //Jonas string
     //Schmedtman string
 }
+*/
+
+//------------------------
+//looping backward and looping in loop
+const jonas = [
+    'Jonas',
+    'Schmedtman',
+    2037 - 1991,
+    'teacher',
+    ['Michale', 'Peter', 'Steven']
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]);
+}
+
+//looping in loop
+for (let exercise = 1; exercise <= 4 ; exercise++) {
+    console.log(`----------- Strating exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`)
+    }
+    
+}
+
 
