@@ -117,6 +117,7 @@ console.log(total1, total2, total3) //143.75 666 52.8
 */
 //-------------------------------------
 
+/*
 //Dot vs Bracket Notation
 const jonarArray = [
     'Jonas',
@@ -163,3 +164,80 @@ console.log(jonas.firstName + ' has' + jonas.friends.length + ' friends, and his
 //Jonas has3 friends, and his best friend is called Michale
 console.log(`${jonas.firstName}  has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}` )
 //Jonas has3 friends, and his best friend is called Michale
+*/
+
+//-------------------------------------
+//obj method
+
+/*
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtman',
+    //age: 2037 - 1991,
+    bitrthYear: 1991,
+    job: 'teacher',  //string value
+    friends: ['Michale', 'Peter', 'Steven'], //array value
+    hasDriverLicense: true, //boolean value
+
+    // calcAge: function(bitrthYear) { //method
+    //     return 2037 - bitrthYear;
+    // }
+
+    // calcAge: function() { 
+    //         //console.log(this)
+    //         return 2037 - this.bitrthYear;
+    //     }
+
+    calcAge: function() { 
+        this.age = 2037 - this.bitrthYear;
+        return this.age;
+    }
+};
+
+//function ทั่วไป ไม่ต่างจาก method ข้างบนเท่าไหร่
+// const calcAge = function(bitrthYear) {
+//     return 2037 - bitrthYear
+// }
+
+//console.log(jonas.calcAge(1991)); //46
+//console.log(jonas['calcAge'](1991)); //46
+
+console.log(jonas.calcAge()); //46
+
+console.log(jonas.age); //46
+
+*/
+//--------------------------
+
+/*
+//object method
+const non = {
+    firstName: 'Non',
+    lastName: 'Pim',
+    job: 'teacher',
+    bitrthYear: 2000,
+    hasDriverLicense: true,
+    // calcAge: function(bitrthYear) {
+    //     return 2023 - bitrthYear;
+    // },
+    calcAge: function() {
+        this.age = 2023 - this.bitrthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and she has a ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`
+    }
+}
+
+//console.log(non.calcAge(2000)); //23
+console.log(`${non.firstName} is a ${non.calcAge(2000)}-year old ${non.job}, and she has a ${non.hasDriverLicense}`)
+//Non is a 23-year old teacher, and she has a true
+
+console.log(non.age); //23
+
+console.log(non.getSummary())
+//Non is a 23-year old teacher, and she has a a driver's license.
+*/
+
+//-------------------
