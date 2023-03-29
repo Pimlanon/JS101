@@ -278,6 +278,8 @@ console.log(max); //3000
 //-----------------------------
 
 //CODING CHALLENGE #2
+
+/*
 const calcAverageHumanAge = [5, 2, 4, 1, 15, 8, 3]
 
 const humanAge = calcAverageHumanAge.map(function(dogAge) {
@@ -302,3 +304,17 @@ console.log(aveAge) //220
 
 const average = aveAge / ageMore18.length;
 console.log(average) //44
+*/
+
+//-----------------------------
+
+//THE FIND METHOD
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+//filter จะ return all the element taht match the condition
+//find มันแค่ return the 'FIRST' element ที่ตรงเงื่อนไข 
+const firstWithdrawal = movements.find(mov => mov < 0);
+
+console.log(movements);
+console.log(firstWithdrawal); //-400
