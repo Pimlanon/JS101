@@ -75,11 +75,12 @@ const currencies = new Map([
     ["GBP", "Pound sterling"],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 //SLICE SPLICE REVERSE CONCAT JOIN
 
+/*
 let arr = ['a', 'b', 'c', 'd', 'e']
 
 //*slice จะตัดเนื้อหาบางส่วน non-mutation
@@ -118,8 +119,36 @@ console.log(letters);
     'i', 'j'
 ]
 */
+
+/*
 console.log([...arr, ...arr2]);
 //ผลที่ได้เหมือนข้างบน แค่ให้เห็นว่า concat ทำงานเหมือนอันนี้
 
 //*join ทำให้เป็ร string พร้อมแบ่งแต่ละตัวด้วย -
 console.log(letters.join('-')); //a-b-c-d-e-f-g-h-i-j
+
+*/
+
+//--------------------------------
+
+//Looping Arrays: forEach
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+//for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+    if (movement > 0) {
+        console.log(`Movement ${i + 1} You deposited ${movement}`);
+    } else {
+        console.log(`Movement ${i + 1} You withdrew ${Math.abs(movement)}`);
+    }
+}
+
+console.log('-----------forEach--------------')
+movements.forEach(function(mov, i, arr) {
+    if (mov > 0) {
+        console.log(`Movement ${i + 1} You deposited ${mov}`);
+    } else {
+        console.log(`Movement ${i + 1} You withdrew ${Math.abs(mov)}`);
+    }
+});
