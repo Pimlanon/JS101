@@ -221,6 +221,7 @@ console.log(movementsDescriotions)
 
 //THE FILTER METHOD
 
+/*
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 const deposit = movements.filter(function(mov) {
@@ -242,3 +243,62 @@ const withdrawls = movements.filter((mov) => mov < 0);
 // });
 
 console.log(withdrawls); //[ -400, -650, -130 ]
+*/
+
+//--------------------------------
+
+//THE REDUCE METHOD
+
+/*
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const balance = movements.reduce(function(acc, cur, i) {
+//     console.log(`Iteration ${i}: ${acc}`)
+//     return acc + cur
+// }, 0);
+
+//เขียนข้างบนด้วย arrow
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+
+console.log(balance); //3840
+
+//ใช้ for...of แทน reduce
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2); //3840
+
+//ใช้ reduce หาค่าที่มากสุด
+const max = movements.reduce((acc, mov) => {
+    if (acc > mov) return acc;
+    else return mov;
+}, movements[0]); //ถ้าหาค่ามากสุด หรือต่ำสุด จะใส่แค่ 0 อย่างปกติไม่ได้
+console.log(max); //3000
+*/
+
+//-----------------------------
+
+//CODING CHALLENGE #2
+const calcAverageHumanAge = [5, 2, 4, 1, 15, 8, 3]
+
+const humanAge = calcAverageHumanAge.map(function(dogAge) {
+    if (dogAge <= 2) {
+        return 2 * dogAge;
+    } else if (dogAge > 2) {
+        return 16 + (dogAge * 4)
+    }
+});
+
+console.log(humanAge); //[36,  4, 32, 2, 76, 48, 28]
+
+const ageMore18 = humanAge.filter(function(more18) {
+    return more18 > 18
+});
+console.log(ageMore18); //[ 36, 32, 76, 48, 28 ]
+
+const aveAge = ageMore18.reduce(function(acc, cur) {
+    return (acc + cur)
+}, 0);
+console.log(aveAge) //220
+
+const average = aveAge / ageMore18.length;
+console.log(average) //44
