@@ -133,6 +133,7 @@ console.log(letters.join('-')); //a-b-c-d-e-f-g-h-i-j
 
 //Looping Arrays: forEach
 
+/*
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 //for (const movement of movements) {
@@ -152,3 +153,66 @@ movements.forEach(function(mov, i, arr) {
         console.log(`Movement ${i + 1} You withdrew ${Math.abs(mov)}`);
     }
 });
+*/
+
+/*
+-----------forEach--------------
+Movement 1 You deposited 200
+Movement 2 You deposited 450
+Movement 3 You withdrew 400
+Movement 4 You deposited 3000
+Movement 5 You withdrew 650
+Movement 6 You withdrew 130
+Movement 7 You deposited 70
+Movement 8 You deposited 1300
+*/
+
+//--------------------------------
+
+//THE MAP METHOD
+
+/*
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const eurToUsd = 1.1;
+
+//ถ้า map จะใช้ function
+const movementsUSD = movements.map(function(mov) {
+    return mov * eurToUsd;
+})
+
+//เหมือนข้างบน แต่ย่อ function ด้วย arrow ให้เป็นสั้นๆแบบบรรทัดเดียว
+//const movementsUSD = movements.map((mov) => mov * eurToUsd);
+
+console.log(movements);
+console.log(movementsUSD);
+*/
+
+/*
+ผลของ ovementsUSD มาจาก movements * eurToUsd
+[
+    220.00000000000003, 495.00000000000006, -440.00000000000006,
+    3300.0000000000005, -715.0000000000001, -143, 77, 1430.0000000000002,
+];
+*/
+
+/*
+//ถ้าใช้ตัวนี้ ได้ผลเหมือน map แต่คนละวิธี อันนี้เราจะใช้ loop over one array and manually create a new one
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
+const movementsDescriotions = movements.map((mov, i) =>
+
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+
+    //ถ้าย่อแบบอันบนงง ก็เขียนอันล่าง
+    // if (mov > 0) {
+    //     return `Movement ${i + 1} You deposited ${mov}`;
+    // } else {
+    //     return `Movement ${i + 1} You withdrew ${Math.abs(mov)}`
+    // };
+);
+
+console.log(movementsDescriotions)
+*/
