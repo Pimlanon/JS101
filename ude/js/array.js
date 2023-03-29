@@ -216,3 +216,29 @@ const movementsDescriotions = movements.map((mov, i) =>
 
 console.log(movementsDescriotions)
 */
+
+//--------------------------------
+
+//THE FILTER METHOD
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const deposit = movements.filter(function(mov) {
+    return mov > 0;
+});
+console.log(movements);
+console.log(deposit); //[ 200, 450, 3000, 70, 1300 ]
+
+//ใช้ for...of แทน filter
+const depositFor = [];
+for (const mov of movements)
+    if (mov > 0) depositFor.push(mov);
+console.log(depositFor); //[ 200, 450, 3000, 70, 1300 ]
+
+const withdrawls = movements.filter((mov) => mov < 0);
+//ถ้าข้างบนสั้นๆงง ก็เขียนแบบนี้ ได้เหมือนกัน
+// const withdrawls = movements.filter(function(mov) {
+//     return mov < 0;
+// });
+
+console.log(withdrawls); //[ -400, -650, -130 ]
