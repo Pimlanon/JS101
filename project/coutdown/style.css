@@ -17,6 +17,7 @@ body {
 }
 
 h1 {
+    font-weight: normal;
     font-size: 4rem;
     margin-top: 10%
 }
@@ -26,7 +27,17 @@ h1 {
 }
 
 .bigtext {
+    font-weight: bold;
     font-size: 6rem;
-    line-height: 0.5;
-    margin: 0 2 rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.5rem;
+    
 }
